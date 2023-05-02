@@ -120,6 +120,30 @@ For the initial setup of the project that involves linking the SDK to this SW ex
 
 If everything went well, you should be able to receive temperature & humidity data as the value of the custom characteristic whenever there is a change in the values, as shown in the image below.
 
+You can use different software on your phone to connect and receive the data. For example:
+[GATTBrowser](https://play.google.com/store/apps/details?id=com.renesas.ble.gattbrowser&hl=en_US)
+[LightBlue](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=nl)
+or
+[SmartBond](https://play.google.com/store/apps/details?id=com.renesas.smartbond&hl=it&gl=US)
+
+#In the figure you can see the expected result on GATTBrowser and Lightblue
+when you turn on your Bluetooth device you can find the advertisement for Bluetooth under the name of 'REN_HS3001_BLE_IND'.
+![GATT](assets/photo_5947495202413460409_y.jpg)
+
+if you turn on the indication you can receive data as soon as there is a change.
+
+![GATT!](assets/photo_5947495202413460408_y.jpg)
+
+On LightBlue you can also see the advertisement for Bluetooth
+![GATT!](assets/photo_5947495202413460407_y.jpg)
+
+if you scroll down you see temperature and humidy :
+![GATT!](assets/photo_5947495202413460406_y.jpg)
+
+for each services you can subscribe and receive the data whenever there is a change:
+![GATT!](assets/photo_5947495202413460405_y.jpg)
+![GATT!](assets/photo_5947495202413460404_y.jpg)
+
 
 
 ## Example description
