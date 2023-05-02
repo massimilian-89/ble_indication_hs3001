@@ -33,10 +33,10 @@ By embracing the roles listed in GAP, a device can join a BLE network:
 # Broadcasting: 
   The transmission of data between these roles does not require an explicit connection.
 
-    .broadcaster:A device that broadcasts advertising data packets to the general public, such as how long a button has been depressed, is a broadcaster.
-      An observer is a device that listens to the information sent by the broadcaster in the advertising packets. The broadcaster and the viewer have no interaction.
+ .broadcaster:A device that broadcasts advertising data packets to the general public, such as how long a button has been depressed, is a broadcaster.
+    An observer is a device that listens to the information sent by the broadcaster in the advertising packets. The broadcaster and the viewer have no interaction.
 
-    .observer:A gadget that monitors the information contained in the advertising packets transmitted by the broadcaster. The broadcaster and the observer don't interact at all.
+ .observer:A gadget that monitors the information contained in the advertising packets transmitted by the broadcaster. The broadcaster and the observer don't interact at all.
 
 # Connecting: 
     For the purpose of data transfer, these roles must explicitly connect and shake hands. Compared to broadcasting roles, these roles are more frequently used.
