@@ -30,7 +30,7 @@ GAP specifies how two devices can directly interact with one another and how BLE
 
 By embracing the roles listed in GAP, a device can join a BLE network:
 
-## Broadcasting: 
+## Broadcasting 
   The transmission of data between these roles does not require an explicit connection.
 
  .broadcaster:A device that broadcasts advertising data packets to the general public, such as how long a button has been depressed, is a broadcaster.
@@ -38,10 +38,21 @@ By embracing the roles listed in GAP, a device can join a BLE network:
 
  .observer:A gadget that monitors the information contained in the advertising packets transmitted by the broadcaster. The broadcaster and the observer don't interact at all.
 
-## Connecting: 
+## Connecting 
 
  For the purpose of data transfer, these roles must explicitly connect and shake hands. Compared to broadcasting roles, these roles are more frequently used.
+ A peripheral device is one that broadcasts its presence so that connected central devices can establish communication. After connecting, peripherals continue to be linked to the central device that approved the connection request and stop broadcasting data to other central devices.
+ As they only need to send beacons occasionally, peripherals are low-power devices. Communication with peripherals is initiated by central devices.
 
+ Central, An apparatus that, after listening to the advertising packets, connects to a peripheral apparatus. Many different peripheral devices can connect to a central device.
+A request connection data packet is sent to the peripheral device by the central device when it wishes to connect. A connection is made if the peripheral device agrees to the request from the central device.
+
+# Generic Attribute Profile (GATT)
+
+There are specific roles that interacting devices can take, similar to GAP:
+
+Client: Typically makes a request to the GATT server. The client has the ability to read and/or write characteristics stored on the server.
+Server: Storing characteristics is one of the server's primary functions. The server must make the characteristics available after the client submits a request.
 
 
 ## HW and SW configuration
