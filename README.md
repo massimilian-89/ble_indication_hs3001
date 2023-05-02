@@ -14,7 +14,7 @@ This example shows:
 
 
 
-##How do GAP and GATT compare?
+## How do GAP and GATT compare?
 It's critical to understand the differences between GAP and GATT.
 
 The general topology of the BLE network stack is specified by GAP.
