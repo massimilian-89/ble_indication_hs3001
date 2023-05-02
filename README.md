@@ -13,6 +13,19 @@ This example shows:
 - How to configure DA14531 as peripheral indicator(GATT indication)
 
 
+
+##How do GAP and GATT compare?
+It's critical to understand the differences between GAP and GATT.
+
+The general topology of the BLE network stack is specified by GAP.
+Once devices have a dedicated connection, GATT goes into great detail about the transfer of attributes (data).
+GATT specifically concentrates on how data is packaged, structured, and delivered in accordance with its specified criteria. 
+The Attribute Protocol (ATT), which GATT directly sits on top of in the BLE network stack, is closely linked with ATT. 
+In fact, GATT employs ATT to explain how data is sent between two connected devices.
+
+
+
+
 ## HW and SW configuration
 
 This example runs on the BLE Smart SoC (System on Chip) devices:
