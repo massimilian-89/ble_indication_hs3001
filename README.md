@@ -27,11 +27,24 @@ The user manuals for the development kits & HS3001 can be found:
 
 ## HS3001 pin configuration:
 
-In `user_periph_setup.h` you can check the following configuration for I2c:
+In `user_periph_setup.h` you can check the following configuration for I2c.It is also possible to modify according to your needs:
 
 ```c
 #define I2C_SLAVE_ADDRESS           0x44                   // Set slave device address
-#define I2C_SPEED_MODE              I2C_SPEED_FAST        // Speed mode: 			I2C_SPEED_FAST (400 kbits/s)
+#define I2C_SPEED_MODE              I2C_SPEED_FAST        // Speed mode: 	I2C_SPEED_FAST (400 kbits/s)
 #define I2C_ADDRESS_MODE            I2C_ADDRESSING_7B     // Addressing mode: I2C_ADDRESSING_7B
 #define I2C_ADDRESS_SIZE            I2C_1BYTES_ADDR       // Address width: 	I2C_1BYTE_ADDR 
+
+```
+
+
+In the same header file you can see the following configuration for HS3001:
+
+```c
+
+#define HS3001_SCL_PORT            GPIO_PORT_0
+#define HS3001_SCL_PIN	           GPIO_PIN_6
+#define HS3001_SDA_PORT            GPIO_PORT_0
+#define HS3001_SDA_PIN             GPIO_PIN_7
+
 ```
