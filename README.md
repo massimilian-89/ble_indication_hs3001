@@ -75,3 +75,16 @@ For the initial setup of the project that involves linking the SDK to this SW ex
 3. Subscribe to the indication.
 
 If everything went well, you should be able to receive temperature & humidity data as the value of the custom characteristic whenever there is a change in the values, as shown in the image below.
+
+
+
+## Example description
+
+you can find custom profile Tutorial on the [Renesas support](http://lpccs-docs.dialog-semiconductor.com/tutorial-custom-profile-DA145xx/introduction.html 
+) by this you can make your own custom profile. The **user_catch_rest_hndl** function in `user_peripheral.c` will handle the messages for our custom profile. 
+There are two possible custom services for this application: write to the indicator. The **user_temperature_message_handler** or **user_humidity_message_handler** function is called whenever there is a change in temperature or humidity. 
+This function will examine the write's content. The temperature timer is terminated if the content of the write is equal to zero. If the value is different, a timer is created that calls **user_send_temperature_ind** or **user_send_humidity_ind** after INDICATION_DELAY ms. 
+The sensor data will be read out and converted to a string (for demonstration purposes) using the **user_send_temperature_ind** or **user_send_humidity_ind** functions.
+Along with some other parameters, such as the connection ID, the string will be included in a message and the characteristic handle. 
+After the message is sent, the app_easy_timer function is used to schedule the next call to  **user_send_temperature_ind** or **user_send_humidity_ind** function. This will ensure the temperature or humidity is transmitted regularly and after each change the user will receive an indication. The `app_easy_timer`function
+has a resolution of 10ms hence we divide the desired delay in ms by 10. 
