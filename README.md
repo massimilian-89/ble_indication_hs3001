@@ -14,7 +14,7 @@ This example shows:
 
 
 
-## GAP &GATT
+## GAP & GATT
 It's critical to understand the differences between GAP and GATT.
 
 The general topology of the BLE network stack is specified by GAP.
@@ -23,6 +23,21 @@ GATT specifically concentrates on how data is packaged, structured, and delivere
 The Attribute Protocol (ATT), which GATT directly sits on top of in the BLE network stack, is closely linked with ATT. 
 In fact, GATT employs ATT to explain how data is sent between two connected devices.
 
+## Generic Access Profile (GAP)
+
+A BLE device can connect or broadcast in order to communicate with other BLE devices and the outside world. Generic Access Profile (GAP) rules must be followed when using these techniques. 
+GAP specifies how two devices can directly interact with one another and how BLE-enabled devices can make themselves available.
+
+By embracing the roles listed in GAP, a device can join a BLE network:
+
+# Broadcasting: The transmission of data between these roles does not require an explicit connection.
+
+ .broadcaster:A device that broadcasts advertising data packets to the general public, such as how long a button has been depressed, is a broadcaster.
+  An observer is a device that listens to the information sent by the broadcaster in the advertising packets. The broadcaster and the viewer have no interaction.
+
+ .observer:A gadget that monitors the information contained in the advertising packets transmitted by the broadcaster. The broadcaster and the observer don't interact at all.
+
+# Connecting: For the purpose of data transfer, these roles must explicitly connect and shake hands. Compared to broadcasting roles, these roles are more frequently used.
 
 
 
