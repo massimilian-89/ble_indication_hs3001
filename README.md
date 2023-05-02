@@ -10,7 +10,7 @@ This example shows:
 - How to use I2C to write HS3001 humidity register.
 - This example uses the [HS3001 High-Performance Relative Humidity and Temperature Sensor ](https://www.renesas.com/us/en/products/sensor-products/humidity-sensors/hs3001-high-performance-relative-humidity-and-temperature-sensor) from Renesas.
 - How to create a custom profile for two or more services.
-- How to configure DA14531 as peripheral indicator
+- How to configure DA14531 as peripheral indicator(GATT indication)
 
 
 ## HW and SW configuration
@@ -48,3 +48,30 @@ In the same header file you can see the following configuration for HS3001:
 #define HS3001_SDA_PIN             GPIO_PIN_7
 
 ```
+
+## How to run the example
+
+### Setup
+For the initial setup of the project that involves linking the SDK to this SW example, please follow the Readme [here](../../Readme.md).
+
+1. Start Keil using the `ble_app_indication_HS3001.uvprojx` Keil project file.
+
+2. Expand the dialog shown in the red box in the image below.
+
+![Expand_Select_Device](assets/Expand_Select_Device.png)
+
+3. Select your device: DA14531, DA14586 or DA14585.
+		
+![Select_Device](assets/Select_Device.png)
+
+
+
+## Expected Results
+
+1. Open the BLE scanner app and look for "REN_HS3001_BLE_IND".
+
+2. Connect to the device.
+
+3. Subscribe to the indication.
+
+If everything went well, you should be able to receive temperature & humidity data as the value of the custom characteristic whenever there is a change in the values, as shown in the image below.
