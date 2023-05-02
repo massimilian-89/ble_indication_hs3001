@@ -39,7 +39,8 @@ By embracing the roles listed in GAP, a device can join a BLE network:
  .observer:A gadget that monitors the information contained in the advertising packets transmitted by the broadcaster. The broadcaster and the observer don't interact at all.
 
 # Connecting: 
-    For the purpose of data transfer, these roles must explicitly connect and shake hands. Compared to broadcasting roles, these roles are more frequently used.
+
+ For the purpose of data transfer, these roles must explicitly connect and shake hands. Compared to broadcasting roles, these roles are more frequently used.
 
 
 
