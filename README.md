@@ -78,7 +78,9 @@ In `user_periph_setup.h` you can check the following configuration for I2c.It is
 #define I2C_ADDRESS_SIZE            I2C_1BYTES_ADDR       // Address width: 	I2C_1BYTE_ADDR 
 
 ```
-
+## Hardware configuration:
+Regarding following figure you can connect the sensor to the development board.
+![Motherboard_Hardware_Configuration_DA14531](assets/HS3001_DA1531.svg)
 
 In the same header file you can see the following configuration for HS3001:
 
