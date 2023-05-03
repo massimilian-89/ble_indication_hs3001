@@ -13,6 +13,11 @@ This example shows:
 - How to configure DA14531 as peripheral indicator(GATT indication)
 
 
+## Profile
+It's a pre-defined collection of Services that has been compiled by either the Bluetooth SIG or by the peripheral designers.
+## Service
+Services are used to break data up into logical entities, and contain specific chunks of data called characteristics.
+Each service distinguishes itself from other services by means of a unique numeric ID called a UUID.
 
 # GAP & GATT
 It's critical to understand the differences between GAP and GATT.
@@ -51,9 +56,26 @@ A request connection data packet is sent to the peripheral device by the central
 
 There are specific roles that interacting devices can take, similar to GAP:
 
-Client: Typically makes a request to the GATT server. The client has the ability to read and/or write characteristics stored on the server.
-Server: Storing characteristics is one of the server's primary functions. The server must make the characteristics available after the client submits a request.
+ClienTypically sends a request to the GATT server. The client can read and/or write attributes found in the server.
+Typically makes a request to the GATT server. The client has the ability to read and/or write characteristics stored on the server.
 
+Server: Storing characteristics is one of the server's primary functions. The server must make the characteristics available after the client submits a request.
+ One of the main roles of the server is to store attributes. Once the client makes a request, the server must make the attributes available.
+
+
+Peripheral or central devices can BOTH act as a server or client, depending on how data is flowing.
+
+GATT Operations are responsible for Data Transfer.
+GATT Operations are dictated by Properties of GATT Characteristics. 
+These properties are:
+Read: The client can Read the value of the Characteristic
+Write: The client can Write value to the Characteristic but client expects a response (ack) from server. 
+Write with No Response: The client can Write value to the Characteristic
+Indicate: The server can send data anytime to the client if it wishes to but server expects a response (ack) from client
+Notify: Same as indication but no response is expected from Client.
+
+
+## Note: In this example we are illustrating 
 
 ## HW and SW configuration
 
