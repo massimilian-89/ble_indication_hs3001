@@ -75,7 +75,7 @@ Indicate: The server can send data anytime to the client if it wishes to but ser
 Notify: Same as indication but no response is expected from Client.
 
 
-## Note: In this example we are illustrating 
+## Note: In this example we are illustrating only indication
 
 ## HW and SW configuration
 
