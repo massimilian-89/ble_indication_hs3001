@@ -205,8 +205,8 @@ when you turn on your Bluetooth device and start to scan you can find the advert
 
 
 
+<img src="assets/smartbond3.jpg" width="400">
 
-![Motherboard_Hardware_Configuration_DA14531](assets/smartbond3.jpg)
 
 ## Example description
 
